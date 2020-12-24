@@ -1,0 +1,63 @@
+body {
+  background-color: teal;
+}
+
+li {
+  list-style: none;
+}
+.title-site {
+  color: wheat;
+  font-size: 40px;
+}
+
+.query {
+  padding: 15px;
+  background: wheat;
+  color: teal;
+  font-size: 18px;
+}
+
+.query::placeholder {
+  padding: 20px;
+  text-align: center;
+  color: teal;
+  font-size: 18px;
+}
+
+.name {
+  text-align-last: left;
+  width: 50%;
+  padding: 15px;
+  font-size: 22px;
+  background-color: wheat;
+  color: teal;
+  margin-bottom: 10px;
+}
+.name:hover {
+  cursor: pointer;
+  font-size: 26px;
+  background-color: rgb(4, 161, 161);
+  color: wheat;
+  /* color: aquamarine; */
+}
+
+.country-name {
+  font-weight: bold;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.item {
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+.span-item {
+  font-weight: normal;
+  font-size: 30px;
+}
+.language-item {
+  list-style: outside;
+  font-weight: normal;
+  font-size: 26px;
+}
