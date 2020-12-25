@@ -5,7 +5,7 @@ import refs from './js/refs.js';
 import fetchCountries from './js/fetchCountries';
 import countryList from '../templates/counstry-list.hbs';
 import countryDescription from '../templates/country.hbs';
-var debounce = require('lodash.debounce');
+import debounce from 'lodash.debounce';
 const { query, list, card } = refs;
 
 query.addEventListener('input', debounce(onSearchQuerye, 500));
@@ -13,7 +13,10 @@ list.addEventListener('click', onClickCreateCountry);
 
 function onSearchQuerye(e) {
   const value = e.target.value;
+
   if (value === '') {
+    resetList();
+    resetCard();
     return;
   }
   fetchCountries(value).then(obj => {
@@ -23,7 +26,7 @@ function onSearchQuerye(e) {
     if (length > 10) {
       notification.error('Пожалуйста, введите более конкретный запрос');
     }
-    if (length > 2 && length < 10) {
+    if (length >= 2 && length <= 10) {
       createCountryList(obj);
       notification.notice();
     }
